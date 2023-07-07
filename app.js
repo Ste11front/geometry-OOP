@@ -28,22 +28,10 @@ console.log(triangle1.perimeter);
 // console.log(employee1.toString());
 
 
-////
-// 1) creare classe student con toString
-// 2) creare classe classroom che contiene un array di students
-// 3) aggiungere a classroom tre metodi:
-//      -addStudent()
-//      -randomizeStudents()
-//      -printSquads()
 
 
-// coppia 1
-// manuela ariotti
-// cesare falzone
 
-// coppia 2
-// luca verduci
-// stefano florio
+
 
 console.log(triangle1.area);
 

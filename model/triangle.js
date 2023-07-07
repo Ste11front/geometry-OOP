@@ -14,12 +14,12 @@ class Triangle{
 
 
     get area(){  // formula di erone A=√ [p (p-a) (p-b) (p-c)
+        //return Math.sqrt(halfPerimeter * (halfPerimeter - this.segmentAB.length) * (halfPerimeter - this.segmentBC.length) * (halfPerimeter - this.segmentCA.length));
         const halfPerimeter = this.perimeter / 2;
         const hPminusAB = halfPerimeter - this.segmentAB.length;
         const hPminusBC = halfPerimeter - this.segmentBC.length;
         const hPminusCA = halfPerimeter - this.segmentCA.length;
-        return Math.sqrt(halfPerimeter * hPminusAB * hPminusBC * hPminusCA);
-      //return Math.sqrt(halfPerimeter * (halfPerimeter - this.segmentAB.length) * (halfPerimeter - this.segmentBC.length) * (halfPerimeter - this.segmentCA.length));
+        return Math.sqrt(halfPerimeter * hPminusAB * hPminusBC * hPminusCA); 
     }
 
     isRectangle(){  // se è un triangolo rettangolo
