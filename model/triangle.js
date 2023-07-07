@@ -13,19 +13,25 @@ class Triangle{
     }
 
 
-    get area(){  // formula di erone (6) A=√ [p (p-a) (p-b) (p-c)
-        
-        const semiPerimeter = this.perimeter / 2;
-        return Math.sqrt(semiPerimeter * (semiPerimeter - this.segmentAB.length) * (semiPerimeter - this.segmentBC.length) * (semiPerimeter - this.segmentCA.length));
+    get area(){  // formula di erone A=√ [p (p-a) (p-b) (p-c)
+        const halfPerimeter = this.perimeter / 2;
+        const hPminusAB = halfPerimeter - this.segmentAB.length;
+        const hPminusBC = halfPerimeter - this.segmentBC.length;
+        const hPminusCA = halfPerimeter - this.segmentCA.length;
+        return Math.sqrt(halfPerimeter * hPminusAB * hPminusBC * hPminusCA);
+      //return Math.sqrt(halfPerimeter * (halfPerimeter - this.segmentAB.length) * (halfPerimeter - this.segmentBC.length) * (halfPerimeter - this.segmentCA.length));
     }
 
     isRectangle(){  // se è un triangolo rettangolo
         
         if (Math.sqrt((this.segmentBC.length ** 2) + (this.segmentCA.length ** 2)) === this.segmentAB.length) {
             return true;
+        } if (Math.sqrt((this.segmentAB.length ** 2) + (this.segmentCA.length ** 2)) === this.segmentBC.length) {
+            return true;
+        } if (Math.sqrt((this.segmentAB.length ** 2) + (this.segmentBC.length ** 2)) === this.segmentCA.length) {
+            return true;
         } else {
             return false;
-        }   
+        }
     }
-
 }
